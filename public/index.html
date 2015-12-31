@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, minimal-ui"/>
+    <meta name="msapplication-tap-highlight" content="no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="keywords" content="聊天">
+    <meta name="description" content="聊天">
+
+    <title id="metaTitle">聊天</title>
+
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/chat.css">
+</head>
+<body ms-controller="MainController" class="gg-body">
+
+<div class="pages">
+    <section class="page users_page" ms-class-active="active=='users'">
+        <div class="group-wrap">
+            <div class="unread" id="unread" ms-visible="total>0">您有{{total}}条消息未读</div>
+            <a class="group-item flex-box"
+               ms-on-tap="chatHandler(el)"
+               ms-href="'#chat_to_' + el.id"
+               ms-repeat="users">
+                <div class="group-header">
+                    <img ms-src="el.thumbUrl" width="100%">
+                    <em class="uread_msg" ms-visible="el.unRead">{{el.unRead}}</em>
+                </div>
+                <div class="group-content flex-item">
+                    <div class="clearfix">
+                        <div class="fl">
+                            <p class="name">{{el.name}}</p>
+                            <p class="msg text-overflow">{{el.lastMsg}}</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+    <section class="page chat_page" ms-class-active="active=='chat'">
+        <div class="inner">
+            <div class="list-wrap">
+                <div class="list">
+                    <div class="list-item other"
+                         ms-repeat="list"
+                         ms-class-other="el.from.id!=self.id"
+                         ms-class-self="el.from.id==self.id">
+                        <div ms-if="el.from.id==self.id" class="clearfix">
+                            <div class="user-image fr"
+                                 ms-css-background="el.from.thumbUrl"></div>
+                            <div class="user-message fr">
+                                <p class="txt_msg">{{el.msg}}</p>
+                                <p class="sanjiao"></p>
+                            </div>
+                        </div>
+                        <div ms-if="el.from.id!=self.id" class="clearfix">
+                            <div class="user-image fl"
+                                 ms-css-background="el.to.thumbUrl"></div>
+                            <div class="user-message fl">
+                                <p>{{el.msg}}</p>
+                                <p class="sanjiao"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <div class="send-box" ms-visible="active=='chat'">
+        <div class="fl txt">
+            <input type="text"
+                   style="width: 95%;height: 30px;"
+                   ms-duplex="msg" placeholder="请输入您要发送的消息">
+        </div>
+        <div class="fl bt" ms-on-tap="sendHandler">
+            发送
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+
+<script type="text/javascript" src="libs/zepto-min.js"></script>
+<script type="text/javascript" src="libs/socket.io.js"></script>
+
+<script type="text/javascript" src="libs/avalon.mobile.min.js"></script>
+<script type="text/javascript" src="controllers/tool.js"></script>
+<!--<script type="text/javascript" src="../views-js/wptTool.js"></script>-->
+<!--<script type="text/javascript" src="libs/dropload.min.js"></script>-->
+<!--<script type="text/javascript" src="../views-js/resetFootMenu.js"></script>-->
+
+<script type="text/javascript" src="controllers/ChatController.js"></script>
+</html>

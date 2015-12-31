@@ -1,0 +1,264 @@
+body,
+div, dl, dt, dd, ul, ol, li,
+h1, h2, h3, h4, h5, h6, pre, code,
+form, fieldset, legend, input, textarea,
+p, blockquote, th, td, hr, button,
+footer, header, hgroup, menu, nav, section {
+    margin: 0;
+    padding: 0;
+}
+
+header, footer, section, article, aside, nav, hgroup, address, figure, figcaption, menu, details {
+    display: block;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+caption, th {
+    text-align: left;
+    font-weight: normal;
+}
+
+html, body, fieldset, img, iframe, abbr {
+    border: 0;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+i, em {
+    font-style: normal;
+}
+
+ol, ul, li {
+    list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6, small {
+    font-size: 100%;
+    font-weight: normal
+}
+
+textarea {
+    overflow: auto;
+    resize: none;
+}
+
+label {
+    cursor: default;
+}
+
+a, button {
+    cursor: pointer;
+}
+
+a, a:hover {
+    text-decoration: none;
+}
+section{
+    display: block;
+    margin: 0;
+}
+iframe {
+    display: block;
+}
+
+input[type="submit"] {
+    border: none;
+}
+
+button, input, select, textarea {
+    font-size: 100%;
+}
+
+button[disabled], html input[disabled] {
+    cursor: default;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    padding: 0;
+    box-sizing: border-box;
+    vertical-align: -2px;
+    margin: 0px 3px 0px 0px;
+    cursor: pointer;
+}
+/* avalon消除一开始出现的{{}} */
+.ms-controller, [ms-controller]{ display:none}
+.mass_sys_log{ display: none; }
+
+.inline-block {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+}
+
+::-webkit-input-placeholder {
+    color: #999;
+}
+
+:-moz-placeholder {
+    color: #555;
+}
+
+::-moz-placeholder {
+    color: #555;
+}
+
+:-ms-input-placeholder {
+    color: #555;
+}
+
+a, a:hover, a:focus {
+    outline: none;
+}
+
+.clearfix {
+    /*display: inline-block;*/
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0
+}
+
+html {
+    font-size: 100px;
+    overflow-x: hidden;
+}
+
+/*@media (device-width: 375px) and (-webkit-min-device-pixel-ratio: 2) {*/
+    /*/!* 兼容iphone 6 *!/*/
+    /*html {*/
+        /*font-size: 117.1875px;*/
+    /*}*/
+/*}*/
+
+/*@media (device-width: 414px) and (-webkit-min-device-pixel-ratio: 3.0) {*/
+    /*/!* 兼容iphone6 plus *!/*/
+    /*html {*/
+        /*font-size: 129.375px;*/
+    /*}*/
+/*}*/
+
+/* avalon消除一开始出现的{{}} */
+.ms-controller, [ms-controller] {
+    display: none !important;
+}
+.mass_sys_log{display: none !important; }
+
+.flex-box {
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    display: -webkit-box;
+}
+
+.flex-box-column{
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -ms-box-orient: vertical;
+}
+.flex-item{
+    -webkit-flex: 1;
+    flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -ms-box-flex: 1;
+}
+
+.text-overflow{
+    width:100%;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    -o-text-overflow:ellipsis;
+    overflow: hidden;
+}
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.pab{
+    position: absolute;
+}
+
+/*提示 Tip.alert*/
+.db-tip {
+    font-size: 0.15rem;
+    text-align: center;
+    border-radius: 0.05rem;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin: -0.1rem 0 0 -1.5rem;
+    background: #000;
+    color: #fff;
+    width: 3rem;
+    /*height: 0.4rem;*/
+    line-height: 0.4rem;
+    -webkit-animation: boxfade 2s ease;
+    -moz-animation: boxfade 2s ease;
+    -ms-animation: boxfade 2s ease;
+    z-index: 11001;
+}
+
+@-webkit-keyframes boxfade {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 0.8;
+    }
+    80% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes boxfade {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 0.8;
+    }
+    80% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@-ms-keyframes boxfade {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 0.8;
+    }
+    80% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+/*提示 Tip.alert*/

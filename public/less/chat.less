@@ -1,0 +1,288 @@
+@scale: 200;
+
+html, body {
+  //height: 100%;
+}
+
+body {
+  font-family: "microsoft yahei";
+  background: #ebebeb;
+}
+
+.fl{
+  float: left;
+}
+
+.image-wrap{
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  img{
+    position: absolute;
+    max-width: 100%;
+    max-height: 100%;
+    top:0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+  }
+}
+
+.gg-body{
+  background: white;
+  padding-bottom: 100rem/@scale;
+  //padding-top: 30rem/@scale;
+
+  .time{
+    width: 140rem/@scale;
+    height: 45rem/@scale;
+    line-height: 45rem/@scale;
+    color: white;
+    background: #cfcfcf;
+    padding: 0 10rem/@scale;
+    text-align: center;
+    border-radius: 6px;
+    font-size: 24rem/@scale;
+    margin: 0 auto 40rem/@scale auto;
+  }
+
+  .list{
+    padding:0 20rem/@scale 60rem/@scale 20rem/@scale;
+    margin-top: 20rem/@scale;
+    background: #ebebeb;
+
+    .list-item{
+      margin-bottom: 40rem/@scale;
+
+      .user-image{
+        width: 80rem/@scale;
+        height: 80rem/@scale;
+        border-radius: 4px;
+        background: url(../images/user/head.png) no-repeat center center;
+        background-size: 100% 100% !important;
+      }
+
+      .user-message{
+        color: black;
+        font-size: 30rem/@scale;
+        line-height: 34rem/@scale;
+        padding: 25rem/@scale 16rem/@scale;
+        border: 1px solid #cfcfcf;
+        border-radius: 8px;
+        position: relative;
+
+        max-width: 400rem/@scale;
+
+        .sanjiao{
+          position: absolute;
+          width: 15rem/@scale;
+          height: 22rem/@scale;
+          top: 50%;
+          margin-top: -11rem/@scale;
+        }
+
+      }
+    }
+
+    .list-item:last-child{
+      margin-bottom: 120rem/@scale;
+    }
+    .other{
+      .user-image{
+        margin-right: 20rem/@scale;
+      }
+      .user-message{
+        background: white;
+        .sanjiao{
+          background: url(../images/user/s1_03.png) no-repeat center;
+          background-size: 15rem/@scale 22rem/@scale;
+          left: -14rem/@scale;
+
+        }
+      }
+    }
+    .self{
+      .user-image{
+        margin-left: 20rem/@scale;
+      }
+      .user-message{
+        background: #a0e75a;
+        .sanjiao{
+          background: url(../images/user/s2_03.png) no-repeat center;
+          background-size: 15rem/@scale 22rem/@scale;
+          right: -14rem/@scale;
+        }
+        .txt_msg{
+          word-break: break-word;
+        }
+      }
+    }
+  }
+
+  .inner{
+    width: 100%;
+    //height: 100%;
+
+    .list-wrap{
+      width: 100%;
+      //overflow: hidden;
+    }
+  }
+
+  .send-box{
+    display: none;
+    border-top: 1px solid #c2c2c2;
+    height: 80rem/@scale;
+    background: #f4f4f6;
+    position: fixed;
+    width: 100%;
+    bottom:0;
+    padding: 17rem/@scale 20rem/@scale 17rem/@scale 20rem/@scale;
+    .txt{
+      width: 478rem/@scale;
+      padding-left: 20rem/@scale;
+      line-height: 70rem/@scale;
+      height: 68rem/@scale;
+      border: 1px solid #cbcbcb;
+      border-radius: 8px;
+      background: white;
+      font-size: 28rem/@scale;
+
+      input{
+        border: 0;
+        outline: 0;
+      }
+      input:focus{
+        outline: 0;
+      }
+    }
+
+    .bt{
+      background: #a0e75a;
+      width: 88rem/@scale;
+      height: 70rem/@scale;
+      line-height: 70rem/@scale;
+      text-align: center;
+      font-size: 28rem/@scale;
+      color: white;
+      border-radius: 8px;
+
+      margin-left: 15rem/@scale;
+    }
+  }
+
+}
+
+.page{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #FFF;
+  //display: none;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+}
+
+.users_page{
+  transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+}
+.users_page.active{
+  transform: translateX(0px);
+  -webkit-transform: translateX(0px);
+}
+
+.chat_page{
+  transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  background: #ebebeb;
+}
+.chat_page.active{
+  transform: translateX(0px);
+  -webkit-transform: translateX(0px);
+}
+
+
+
+.group-wrap{
+  background: white;
+  .unread{
+    width: 100%;
+    height: 88rem/@scale;
+
+    background: url(../images/info_03.png) no-repeat 45rem/@scale center;
+    padding-left: 135rem/@scale;
+    background-size: 40rem/@scale 40rem/@scale;
+    line-height: 88rem/@scale;
+    color: #717171;
+    font-size: 24rem/@scale;
+    background-color: #efeff4;
+  }
+  .group-item{
+    padding-top: 16rem/@scale;
+    padding-bottom: 16rem/@scale;
+
+    margin-left: 20rem/@scale;
+    border-bottom: 1px solid #cbcccf;
+
+    .group-header{
+      width: 110rem/@scale;
+      height: 130rem/@scale;
+      position: relative;
+      img{
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        max-width: 100%;
+        max-height: 100%;
+        position: absolute;
+        margin: auto;
+        border-radius: 100%;
+      }
+      .uread_msg{
+        background: #f43531;
+        border-radius: 18rem/@scale;
+        height: 36rem/@scale;
+        line-height: 36rem/@scale;
+        padding:0 12rem/@scale;
+        color: white;
+        font-size: 24rem/@scale;
+        text-align: center;
+        position: absolute;
+        top: 0rem/@scale;
+        right: -16rem/@scale;
+      }
+    }
+    .group-content{
+      font-size: 24rem/@scale;
+      color: #999899;
+      //border-bottom: 1px solid #cbcccf;
+      padding-left: 25rem/@scale;
+      .name{
+        font-size: 34rem/@scale;
+        color: black;
+        line-height: 60rem/@scale;
+      }
+      .msg{
+        font-size: 24rem/@scale;
+        color: #999999;
+        margin-top: 20rem/@scale;
+        width: 420rem/@scale;
+      }
+      .time{
+
+      }
+      .txt{
+        width: 166rem/@scale;
+        height: 106rem/@scale;
+        overflow: hidden;
+        margin-top: 10rem/@scale;
+        padding-right: 10rem/@scale;
+      }
+    }
+  }
+}
